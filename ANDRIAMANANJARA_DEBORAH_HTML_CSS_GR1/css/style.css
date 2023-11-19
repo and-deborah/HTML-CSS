@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+    --main-color: #be875f;
+    --bg : #181818;
+    --bordure : #eee9e7 4px solid;
+} 
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin : 0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border : none;
+    text-decoration : none;
+    text-transform: capitalize;
+}
+
+html{
+    font-size : 60%;
+}
+
+body{
+    background: var(--bg);
+}
+
+.bouton{
+    background-color: var(--main-color);
+    border : none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin : 4px 2px;
+    cursor : pointer;
+    border-radius: 12px;
+}
+
+.bouton:hover{
+    letter-spacing: 2.5px;
+}
+
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center ;
+    justify-content : space-between;
+    padding : 10px 8%;
+
+    border-bottom : var(--bordure);
+}
+
+.header .logo{
+    width: 6%;
+}
+
+.header .navigation a{
+    margin : 20px;
+    font-size: 200%;
+    color: white;
+}
+
+.header .navigation a:hover{
+    color:var(--main-color);
+    border-bottom: 2.5px solid var(--main-color);
+    padding-bottom: 5px;
+}
+
+.titre{
+    text-align : center;
+    color : white;
+    font-size: xx-large;
+    padding :2%;
+}
+
+.titre span{
+    color : var(--main-color);
+}
+
+.intel .cadre .description span{
+    color: var(--main-color);
+}
+
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../images/coffee_home.jpg) no-repeat;
+    background-size : cover;
+    background-position: center;
+}
+
+.home .description h3{
+    max-width: 100%;
+    font-size: xx-large;
+    text-transform: uppercase;
+    color: white;
+
+}
+
+.home .description p{
+    font-size: x-large;
+    font-weight: lighter;
+    color: white;
+}
+
+section{
+    padding : 5% 5%;
+}
+
+.menu .tableau{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap : 10%;
+}
+
+.menu .tableau .cellule{
+    padding: 5%;
+    text-align : center;
+    border : var(--bordure);
+}
+
+.menu .tableau .cellule:hover{
+    background: bisque
+}
+
+.menu .tableau .cellule:hover > *{
+    color: var(--bg)
+}
+
+.menu .tableau .cellule img{
+    width: 70%;
+}
+.menu .tableau .cellule h3{
+    color: white;
+    font-size: large;
+}
+
+.menu .tableau .cellule .prix{
+    color: rgb(231, 192, 102);
+    font-size: x-large;
+}
+
+.intel .cadre{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgb(40, 40, 40);
+}
+
+.intel .cadre .image{
+    flex : 1 1 500px
+}
+
+.intel .cadre .description{
+    flex : 1 1 500px
+}
+
+.intel .cadre .description h3{
+    color: white;
+    font-size: 500%
+}
+
+.intel .cadre .description p{
+    color: white;
+    font-size: 200%;
+    padding : 2%
+}
+
+.intel .cadre .image img{
+    width: 100%;
+    padding: 5%;
+}
+
+
+
+
+
+
+
+
+/* Partie responsive*/
+
+@media all and (max-device-width: 480px)
+{
+    html{
+        font-size : 50%;
+    }
+
+    .header{
+        padding : 10px 10px;
+    }
+
+    section{
+        padding : 10px;
+    }
+
+    .home{
+        justify-content: center;
+        background-position: left;
+        text-align: center;
+    }
+    
+    .home .description h3{
+        font-size: 40px;
+    }
+    
+    .home .description p{
+        font-size: 20px;
+    }
+
+}
